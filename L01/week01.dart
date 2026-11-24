@@ -1,6 +1,6 @@
 // ============================================================
 // L01 — Dart พื้นฐาน (ITE-439 สัปดาห์ที่ 1)
-// ชื่อ-สกุล: ______________________  รหัสนักศึกษา: ____________
+// ชื่อ-สกุล: นิธิ พรมหาญ  รหัสนักศึกษา: 2413110038
 // ============================================================
 //
 // วิธีทำ
@@ -44,8 +44,8 @@ void main() {
 // ใบ้: ตัวเลขทศนิยมใช้ double, ตัดทศนิยมใช้ .toStringAsFixed(2)
 // ------------------------------------------------------------
 String bmi(double weight, double height) {
-  // TODO: เขียนโค้ดตรงนี้
-  return '';
+  double result = weight / (weight * height);
+  return result.toStringAsFixed(2);
 }
 
 // ------------------------------------------------------------
@@ -59,18 +59,17 @@ String bmi(double weight, double height) {
 //      เช่น list.reduce((a, b) => a > b ? a : b)
 // ------------------------------------------------------------
 String average(List<int> numbers) {
-  // TODO
-  return '';
+  final sum = numbers.reduce((a, b) => a + b);
+  final avg = sum / numbers.length;
+  return avg.toStringAsFixed(2);
 }
 
 int highest(List<int> numbers) {
-  // TODO
-  return 0;
+  return numbers.reduce((a, b) => a > b ? a : b); 
 }
 
 int lowest(List<int> numbers) {
-  // TODO
-  return 0;
+  return numbers.reduce((a, b) => a < b ? a : b);
 }
 
 // ------------------------------------------------------------
@@ -133,3 +132,5 @@ List<String> topThreeExpensive(List<Map<String, dynamic>> list) {
   // TODO
   return [];
 }
+
+
